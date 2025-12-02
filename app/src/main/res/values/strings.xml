@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DailyTask Monitor</string>
+    <string name="login_title">تسجيل الدخول</string>
+    <string name="register_title">إنشاء حساب</string>
+    <string name="email_hint">البريد الإلكتروني</string>
+    <string name="password_hint">كلمة المرور</string>
+    <string name="login_button">تسجيل الدخول</string>
+    <string name="register_button">إنشاء حساب</string>
+    <string name="no_account">ليس لديك حساب؟ إنشاء حساب</string>
+    <string name="has_account">لديك حساب بالفعل؟ تسجيل الدخول</string>
+    <string name="user_type_user">مستخدم</string>
+    <string name="user_type_supervisor">مراقب</string>
+    <string name="tasks_title">المهام</string>
+    <string name="qr_code_title">QR Code</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="add_task_title">إضافة مهمة جديدة</string>
+    <string name="task_title_hint">عنوان المهمة</string>
+    <string name="task_description_hint">الوصف (اختياري)</string>
+    <string name="task_time_hint">الوقت (HH:MM)</string>
+    <string name="task_urgency_hint">مستوى الإلحاح</string>
+    <string name="add_task_button">إضافة</string>
+    <string name="cancel_button">إلغاء</string>
+    <string name="complete_task_button">تم التنفيذ</string>
+    <string name="delete_task_button">حذف</string>
+    <string name="task_status_pending">قيد الانتظار</string>
+    <string name="task_status_in_progress">قيد التنفيذ</string>
+    <string name="task_status_completed">مكتمل</string>
+    <string name="task_status_confirmed">مؤكد</string>
+    <string name="urgency_low">منخفضة</string>
+    <string name="urgency_medium">متوسطة</string>
+    <string name="urgency_high">عالية</string>
+    <string name="urgency_critical">حرجة</string>
+    <string name="alarm_title">تنبيه المهمة!</string>
+    <string name="alarm_waiting_supervisor">في انتظار تأكيد المراقب...</string>
+    <string name="alarm_confirmed">تم تأكيد المهمة!</string>
+    <string name="alarm_rejected">رفض المراقب التأكيد</string>
+    <string name="alarm_retry">يجب إعادة تنفيذ المهمة</string>
+    <string name="qr_code_instruction">اطلب من المراقب مسح هذا الرمز لربط حسابك</string>
+    <string name="generate_new_qr">إنشاء رمز جديد</string>
+    <string name="no_tasks">لا توجد مهام حالياً</string>
+    <string name="error_empty_fields">يرجى ملء جميع الحقول المطلوبة</string>
+    <string name="error_short_password">كلمة المرور يجب أن تكون 6 أحرف على الأقل</string>
+    <string name="error_login_failed">فشل تسجيل الدخول</string>
+    <string name="error_registration_failed">فشل إنشاء الحساب</string>
+</resources>
