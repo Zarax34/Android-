@@ -3,7 +3,6 @@ name: Build Android App
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:
 
 jobs:
   build:
@@ -11,24 +10,32 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4  # عدل هذا أيضًا
-      
+      uses: actions/checkout@v4
+    
     - name: Set up JDK 17
-      uses: actions/setup-java@v4  # وهذا أيضًا
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
-        
+    
     - name: Setup Android SDK
-      uses: android-actions/setup-android@v3  # تحديث هذا
-        
-    - name: Build with Gradle
+      uses: android-actions/setup-android@v3
+    
+    - name: Initialize Gradle Wrapper if missing
       run: |
-        chmod +x gradlew
-        ./gradlew assembleDebug
-        
+        if [ ! -f "gradlew" ]; then
+          echo "gradlew not found, creating wrapper..."
+          gradle wrapper --gradle-version 8.5
+          chmod +x gradlew
+        else
+          chmod +x gradlew
+        fi
+    
+    - name: Build with Gradle
+      run: ./gradlew assembleDebug --stacktrace
+    
     - name: Upload APK
-      uses: actions/upload-artifact@v4  # هذا هو التغيير الرئيسي
+      uses: actions/upload-artifact@v4
       with:
-        name: android-app
+        name: app-debug
         path: app/build/outputs/apk/debug/*.apk
